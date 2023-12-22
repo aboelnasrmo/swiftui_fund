@@ -30,6 +30,16 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 180, height: 180)
                 }
+                Text("32°")
+                    .font(.system(size: 70))
+                    .foregroundColor(.white)
+                    .padding(.top, 50)
+                VStack(){
+                    Text("Tuesday, December 18")
+                        .font(.system(size: 20))
+                        .foregroundColor(.white)
+                        .padding(.top, 50)
+                }
            
                 Spacer()
                 
