@@ -9,21 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        ZStack {
+        ZStack() {
             
             LinearGradient(gradient: Gradient(colors: [.blue, .white]),
                            startPoint: .topLeading,
                            endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack{
+            VStack() {
                 Text("Cairo")
                     .font(.system(size: 50))
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.top, 50)
-                VStack{
+                VStack() {
                     Image(systemName: "cloud.sun.fill")
                         .renderingMode(.original)
                         .resizable()
