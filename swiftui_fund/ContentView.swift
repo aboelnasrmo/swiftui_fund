@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let states = ["cloud.sun.fill", "cloud.sun.rain.fill", "cloud.sun.bolt.fill", "cloud", "sun.max.fill", "wind", "snow", "tornado", "cloud.sun.bolt.fill"]
+    let states = [ "cloud.sun.bolt.fill", "wind", "snow"]
     var body: some View {
         
         ZStack() {
@@ -24,6 +24,7 @@ struct ContentView: View {
                     CicularView(content: state)
                 }
             }
+            .padding(.all, 20)
             
 
             
@@ -39,7 +40,7 @@ struct CardView: View {
                 .font(.system(size: 50))
                 .font(.largeTitle)
                 .fontWeight(.bold)
-                .foregroundColor(.white)
+                .foregroundColor(.blue)
                 .padding(.top, 50)
             VStack() {
                 Image(systemName: "cloud.sun.fill")
@@ -74,10 +75,11 @@ struct CicularView: View {
     var body: some View {
         ZStack {
             Circle()
-                .foregroundColor(.white)
+                .foregroundColor(.blue)
                 .frame(width: 100, height: 100)
             if isShowing{
                 Image(systemName: content)
+                  
                     .renderingMode(.original)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
