@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let states = [ "cloud.sun.bolt.fill", "wind", "snow","sun.min","sunrise.fill"]
+
     var body: some View {
         
         ZStack() {
@@ -18,17 +18,21 @@ struct ContentView: View {
                            endPoint: .bottomTrailing)
                 .edgesIgnoringSafeArea(.all)
             
-//         CardView()
-           
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
-                    ForEach(states, id: \.self) { state in
-                        CicularView(content: state )
-                    }
-                }
-                .padding(.all, 20)
+        
+//           
+//            ScrollView(.horizontal, showsIndicators: false) {
+//                HStack {
+//                    ForEach(states, id: \.self) { state in
+//                        CicularView(content: state )
+//                    }
+//                }
+//                .padding(.all, 20)
+//            }
+            VStack{
+                CardView()
+                CardViewData()
             }
-            
+          
             
 
             
@@ -57,14 +61,9 @@ struct CardView: View {
                 .font(.system(size: 70))
                 .foregroundColor(.white)
                 .padding(.top, 50)
-            VStack(){
-                Text("Tuesday, December 18")
-                    .font(.system(size: 20))
-                    .foregroundColor(.white)
-                    .padding(.top, 50)
-            }
+        
        
-            Spacer()
+           
             
         }
         myCardView
@@ -102,4 +101,40 @@ struct CicularView: View {
 }
 #Preview {
     ContentView()
+}
+
+struct CardViewData: View {
+    let states = [ "cloud.sun.bolt.fill", "wind", "snow","sun.min","sunrise.fill"]
+  @State  var isClicked : Bool = false
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(states, id: \.self) { state in
+                    Rectangle()
+                        
+                        .foregroundColor(.blue.opacity(0.5))
+                        .frame(width: 150, height: 150)
+          
+            
+                        .overlay(
+                            
+                            Image(
+                                systemName: state)
+                                .renderingMode(.original)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .frame(width: 100, height: 100)
+                        )
+                        .cornerRadius(20)
+                        .padding(.all, 20)
+                      
+                }
+            }
+            .onTapGesture {
+                isClicked.toggle()
+                print("is clicked")
+            }
+            .padding(.all, 20)
+        }
+    }
 }
