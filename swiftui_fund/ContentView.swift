@@ -21,7 +21,7 @@ struct ContentView: View {
 //         CardView()
             HStack {
                 ForEach(states, id: \.self) { state in
-                    CicularView(content: state)
+                    CicularView(content: state )
                 }
             }
             .padding(.all, 20)
