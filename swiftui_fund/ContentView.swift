@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let states = [ "cloud.sun.bolt.fill", "wind", "snow"]
+    let states = [ "cloud.sun.bolt.fill", "wind", "snow","sun.min","sunrise.fill"]
     var body: some View {
         
         ZStack() {
@@ -19,12 +19,16 @@ struct ContentView: View {
                 .edgesIgnoringSafeArea(.all)
             
 //         CardView()
-            HStack {
-                ForEach(states, id: \.self) { state in
-                    CicularView(content: state )
+           
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(states, id: \.self) { state in
+                        CicularView(content: state )
+                    }
                 }
+                .padding(.all, 20)
             }
-            .padding(.all, 20)
+            
             
 
             
