@@ -13,6 +13,7 @@
 		20A2FCF42B3600D3007ACA87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A2FCF32B3600D3007ACA87 /* Preview Assets.xcassets */; };
 		20EEEABC2B39EF97008981B2 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEABB2B39EF97008981B2 /* circle.swift */; };
 		20EEEABE2B39F1FE008981B2 /* colorsbootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEABD2B39F1FE008981B2 /* colorsbootcamp.swift */; };
+		20EEEAC32B3B5ADA008981B2 /* grediantbootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20EEEAC22B3B5ADA008981B2 /* grediantbootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		20A2FCF32B3600D3007ACA87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		20EEEABB2B39EF97008981B2 /* circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.swift; sourceTree = "<group>"; };
 		20EEEABD2B39F1FE008981B2 /* colorsbootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = colorsbootcamp.swift; sourceTree = "<group>"; };
+		20EEEAC22B3B5ADA008981B2 /* grediantbootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = grediantbootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				20A2FCEC2B3600D2007ACA87 /* swiftui_fundApp.swift */,
 				20EEEABB2B39EF97008981B2 /* circle.swift */,
 				20EEEABD2B39F1FE008981B2 /* colorsbootcamp.swift */,
+				20EEEAC22B3B5ADA008981B2 /* grediantbootcamp.swift */,
 				20A2FCEE2B3600D2007ACA87 /* ContentView.swift */,
 				20A2FCF02B3600D3007ACA87 /* Assets.xcassets */,
 				20A2FCF22B3600D3007ACA87 /* Preview Content */,
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20EEEAC32B3B5ADA008981B2 /* grediantbootcamp.swift in Sources */,
 				20EEEABC2B39EF97008981B2 /* circle.swift in Sources */,
 				20A2FCEF2B3600D2007ACA87 /* ContentView.swift in Sources */,
 				20EEEABE2B39F1FE008981B2 /* colorsbootcamp.swift in Sources */,

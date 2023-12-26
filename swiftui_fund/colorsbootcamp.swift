@@ -10,7 +10,7 @@ import SwiftUI
 struct colorsbootcamp: View {
     var body: some View {
         RoundedRectangle(cornerRadius:25)
-            .fill(Color.blue)
+            .fill(Color("ColorGreen"))
             .frame(width: 300, height: 200)
     }
 }
