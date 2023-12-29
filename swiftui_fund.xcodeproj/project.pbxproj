@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207FFBE52B3ED40800AD1405 /* weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207FFBE42B3ED40800AD1405 /* weather.swift */; };
 		20A2FCED2B3600D2007ACA87 /* swiftui_fundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A2FCEC2B3600D2007ACA87 /* swiftui_fundApp.swift */; };
 		20A2FCEF2B3600D2007ACA87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A2FCEE2B3600D2007ACA87 /* ContentView.swift */; };
 		20A2FCF12B3600D3007ACA87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20A2FCF02B3600D3007ACA87 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		207FFBE42B3ED40800AD1405 /* weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weather.swift; sourceTree = "<group>"; };
 		20A2FCE92B3600D2007ACA87 /* swiftui_fund.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftui_fund.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20A2FCEC2B3600D2007ACA87 /* swiftui_fundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftui_fundApp.swift; sourceTree = "<group>"; };
 		20A2FCEE2B3600D2007ACA87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				20EEEABB2B39EF97008981B2 /* circle.swift */,
 				20EEEABD2B39F1FE008981B2 /* colorsbootcamp.swift */,
 				20EEEAC22B3B5ADA008981B2 /* grediantbootcamp.swift */,
+				207FFBE42B3ED40800AD1405 /* weather.swift */,
 				20A2FCEE2B3600D2007ACA87 /* ContentView.swift */,
 				20A2FCF02B3600D3007ACA87 /* Assets.xcassets */,
 				20A2FCF22B3600D3007ACA87 /* Preview Content */,
@@ -148,6 +151,7 @@
 			files = (
 				20EEEAC32B3B5ADA008981B2 /* grediantbootcamp.swift in Sources */,
 				20EEEABC2B39EF97008981B2 /* circle.swift in Sources */,
+				207FFBE52B3ED40800AD1405 /* weather.swift in Sources */,
 				20A2FCEF2B3600D2007ACA87 /* ContentView.swift in Sources */,
 				20EEEABE2B39F1FE008981B2 /* colorsbootcamp.swift in Sources */,
 				20A2FCED2B3600D2007ACA87 /* swiftui_fundApp.swift in Sources */,
