@@ -10,35 +10,10 @@ import SwiftUI
 struct weather: View {
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [Color.blue, Color("lightBlue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
+            BackgroundView(topColor: .blue, bottomColor: Color("lightBlue"))
             VStack {
-                Text("Cairo")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .padding()
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
-                .padding()
-                VStack {
-                    Image(systemName: "cloud.sun.fill")
-                        .renderingMode(.original)
-                        .resizable()
-                        .font(.largeTitle)
-                        .frame(width: 100, height: 100)
-                        .fontWeight(.bold)
-                        .padding()
-                    .cornerRadius(10)
-                    
-                    
-                    Text("22°")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .padding()
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding(.bottom,40)
+                CityTextView(cityName: "Cairo")
+               MainCityWeatherView(weatherData: "cloud.sun.fill", temp: 20)
                 ScrollView(.horizontal) {
                     HStack(spacing:20) {
                         
@@ -50,12 +25,7 @@ struct weather: View {
                         WeatherDayView(day: "Thu", imageName: "cloud.sun.fill", temp: 22)
                         WeatherDayView(day: "Fri", imageName: "cloud.sun.fill", temp: 22)
                         WeatherDayView(day: "Sat", imageName: "cloud.sun.fill", temp: 22)
-                        
-                      
-                  
-                    
-                       
-                        
+ 
                     }
                 }
                 .padding(.horizontal)
@@ -114,5 +84,53 @@ struct WeatherDayView: View {
                 .foregroundColor(.white)
             
         }
+    }
+}
+
+struct BackgroundView: View {
+    var topColor:Color
+    var bottomColor:Color
+    var body: some View {
+        LinearGradient(gradient: Gradient(colors: [topColor, bottomColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            .edgesIgnoringSafeArea(.all)
+    }
+}
+
+struct CityTextView: View {
+    var cityName:String
+    var body: some View {
+        Text(cityName)
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .padding()
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .padding()
+    }
+}
+
+struct MainCityWeatherView: View {
+    var weatherData:String
+    var temp:Int
+    var body: some View {
+        VStack {
+            Image(systemName: weatherData)
+                .renderingMode(.original)
+                .resizable()
+                .font(.largeTitle)
+                .frame(width: 100, height: 100)
+                .fontWeight(.bold)
+                .padding()
+                .cornerRadius(10)
+            
+            
+            Text("\(temp)")
+                .font(.largeTitle)
+                .fontWeight(.bold)
+                .padding()
+                .foregroundColor(.white)
+                .cornerRadius(10)
+        }
+        .padding(.bottom,40)
     }
 }
