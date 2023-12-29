@@ -12,12 +12,11 @@ struct weather: View {
         ZStack{
             BackgroundView(topColor: .blue, bottomColor: Color("lightBlue"))
             VStack {
-                CityTextView(cityName: "Cairo")
+               CityTextView(cityName: "Cairo")
                MainCityWeatherView(weatherData: "cloud.sun.fill", temp: 20)
+                
                 ScrollView(.horizontal) {
                     HStack(spacing:20) {
-                        
-                        
                         WeatherDayView(day: "Sun", imageName: "cloud.sun.fill", temp: 22)
                         WeatherDayView(day: "Mon", imageName: "cloud.sun.fill", temp: 22)
                         WeatherDayView(day: "Tue", imageName: "cloud.sun.fill", temp: 22)
@@ -33,18 +32,13 @@ struct weather: View {
                 
                 Spacer()
                 
-                
                 Button{
                     print("tapped")
-                } label:{
-                    Text("Change Day Time")
-                        .frame(width: 280,height: 50)
-                        .background(.white)
-                        .font(.system(size: 20,weight: .bold,design: .default))
-                        .cornerRadius(20)
+                }label: {
+                    WeatherButton(buttonText: "Change Day Time", textColor: .blue, backGroundColor: .white)
                 }
-                
-                
+              
+                             
                 Spacer()
             }
            
@@ -132,5 +126,21 @@ struct MainCityWeatherView: View {
                 .cornerRadius(10)
         }
         .padding(.bottom,40)
+    }
+}
+
+struct WeatherButton: View {
+    var buttonText:String
+    var textColor:Color
+    var backGroundColor:Color
+    var body: some View {
+        
+            Text(buttonText)
+                .frame(width: 280,height: 50)
+                .background(backGroundColor)
+                .foregroundColor(textColor)
+                .font(.system(size: 20,weight: .bold,design: .default))
+                .cornerRadius(20)
+        
     }
 }
