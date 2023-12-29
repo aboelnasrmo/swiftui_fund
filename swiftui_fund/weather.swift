@@ -38,7 +38,7 @@ struct weather: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
-              Spacer()
+                .padding(.bottom,40)
                 ScrollView(.horizontal) {
                     HStack(spacing:20) {
                         
@@ -58,6 +58,23 @@ struct weather: View {
                         
                     }
                 }
+                .padding(.horizontal)
+                
+                
+                Spacer()
+                
+                
+                Button{
+                    print("tapped")
+                } label:{
+                    Text("Change Day Time")
+                        .frame(width: 280,height: 50)
+                        .background(.white)
+                        .font(.system(size: 20,weight: .bold,design: .default))
+                        .cornerRadius(20)
+                }
+                
+                
                 Spacer()
             }
            
