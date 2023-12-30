@@ -35,7 +35,7 @@ struct weather: View {
                 
                 Button{
                     print("tapped")
-                    isNight = !isNight
+                    isNight.toggle()
                 }label: {
                     WeatherButton(buttonText: "Change Day Time", textColor: .blue, backGroundColor: .white)
                 }
