@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct weather: View {
+    @State private var isNight = false
     var body: some View {
         ZStack{
-            BackgroundView(topColor: .blue, bottomColor: Color("lightBlue"))
+            BackgroundView(topColor: isNight ? .black : .blue,  bottomColor:isNight ? .gray : Color("lightBlue"))
             VStack {
                CityTextView(cityName: "Cairo")
                MainCityWeatherView(weatherData: "cloud.sun.fill", temp: 20)
@@ -34,6 +35,7 @@ struct weather: View {
                 
                 Button{
                     print("tapped")
+                    isNight = !isNight
                 }label: {
                     WeatherButton(buttonText: "Change Day Time", textColor: .blue, backGroundColor: .white)
                 }
