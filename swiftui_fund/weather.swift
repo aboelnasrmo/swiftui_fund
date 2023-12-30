@@ -14,7 +14,7 @@ struct weather: View {
             BackgroundView(isNight: $isNight)
             VStack {
                CityTextView(cityName: "Cairo")
-               MainCityWeatherView(weatherData: "cloud.sun.fill", temp: 20)
+                MainCityWeatherView(weatherData:isNight ? "moon.stars" : "cloud.sun.fill", temp: 20)
                 
                 ScrollView(.horizontal) {
                     HStack(spacing:20) {
@@ -86,7 +86,7 @@ struct WeatherDayView: View {
 struct BackgroundView: View {
     @Binding var isNight:Bool
     var body: some View {
-        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue]), startPoint: .topLeading, endPoint: .bottomTrailing)
+        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
             .edgesIgnoringSafeArea(.all)
     }
 }
@@ -112,6 +112,7 @@ struct MainCityWeatherView: View {
             Image(systemName: weatherData)
                 .renderingMode(.original)
                 .resizable()
+                .foregroundColor(.white)
                 .font(.largeTitle)
                 .frame(width: 100, height: 100)
                 .fontWeight(.bold)
